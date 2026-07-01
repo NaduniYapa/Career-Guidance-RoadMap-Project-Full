@@ -1,0 +1,41 @@
+{
+  "name": "career-guidance-roadmap-platform",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "db:init": "node scripts/init-db.js",
+    "db:seed": "node scripts/seed-db.js",
+    "db:reset": "node scripts/reset-db.js",
+    "migrate:careers": "node scripts/migrate-career-data.js",
+    "migrate:users": "node scripts/migrate-user-data.js",
+    "migrate:chatbot": "node scripts/migrate-chatbot-responses.js",
+    "migrate:phases": "node scripts/migrate-learning-phases.js",
+    "migrate:resources": "node scripts/migrate-resource-types.js",
+    "verify:migration": "node scripts/verify-migration.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1009.0",
+    "@aws-sdk/s3-request-presigner": "^3.1009.0",
+    "@heroicons/react": "^2.2.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "framer-motion": "^12.35.0",
+    "jsonwebtoken": "^9.0.3",
+    "next": "^15.0.0",
+    "pg": "^8.20.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "^15.0.0",
+    "tailwindcss": "^4"
+  }
+}
